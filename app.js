@@ -14,7 +14,7 @@ axios(url).then(response => {
 const html = response.data;
 const $ = cheerio.load(html);
 
-$(".semesters > table > tr > td", html).each(function()
+$('tr', html).each(function()
 {
 const title = $(this).text();
 articles.push({
